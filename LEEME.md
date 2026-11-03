@@ -18,14 +18,22 @@ Estático (HTML/CSS/JS, sin build). Para verlo en local: `python -m http.server 
 | `img/logo-referencia.jpg` | Logo que pasaron (referencia) |
 
 ## Publicar
-Está publicada en Vercel: **https://shula-web.vercel.app** (proyecto `shula-web`, cuenta piurlen).
-Para subir cambios, desde esta carpeta:
+El código está en GitHub (**github.com/Piurlen/shula-web**) y Vercel publica solo cada cambio que llega a `main`:
+**https://shula-web.vercel.app**
 
 ```
-vercel deploy --prod --yes
+git pull
+git add -A
+git commit -m "Qué cambió"
+git push
 ```
 
-`.vercelignore` deja afuera lo interno (originales, notas, vista de prueba). Para usar **shula.com.ar**, agregar el dominio en Vercel → shula-web → Settings → Domains y apuntar el DNS como indique Vercel.
+`.vercelignore` deja afuera lo interno y `.gitignore` deja afuera las fotos originales. Para usar **shula.com.ar**: Vercel → shula-web → Settings → Domains.
+
+## Editar desde otra compu (con Claude)
+1. Instalar Git, Python y Claude Code.
+2. `git clone https://github.com/Piurlen/shula-web.git` y abrir esa carpeta con Claude.
+3. Claude lee `CLAUDE.md`, que explica la web, las reglas de la marca y cómo publicar.
 
 ## Reemplazar fotos
 Cada placeholder es un `<figure class="ph …">` que dice qué toma va. Hay que meterle un `<img>` adentro y la etiqueta se oculta sola:
