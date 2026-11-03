@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>shula — Dirección visual</title>
+  <link rel="stylesheet" href="css/shula.css">
+  <style>
+    .dv { padding: 40px var(--gutter) 120px; max-width: 1360px; margin: 0 auto; }
+    .dv section { padding: 72px 0; border-top: 1px solid var(--line); display: grid; gap: 28px; }
+    @media (min-width: 1024px) { .dv section { grid-template-columns: 3fr 9fr; gap: 24px; } }
+    .dv h1 { font-size: clamp(48px, 9vw, 140px); font-weight: 400; letter-spacing: -.04em; line-height: .95; margin: 20px 0 32px; }
+    .dv h2 { font-size: var(--fs-micro); letter-spacing: var(--track-eyebrow); text-transform: uppercase; color: var(--cognac); }
+    .dv p { max-width: 60ch; }
+    .dv .intro { font-size: var(--fs-lead); line-height: 1.5; max-width: 44ch; }
+    .sw-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    @media (min-width: 700px) { .sw-row { grid-template-columns: repeat(6, 1fr); } }
+    .swc { aspect-ratio: 3/4; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; font-size: 11px; letter-spacing: .06em; position: relative; }
+    .swc::before { content: ""; position: absolute; inset: 0; background: var(--grain); opacity: .2; mix-blend-mode: multiply; }
+    .swc b { display: block; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; margin-bottom: 4px; }
+    .type-row { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .type-row small { font-size: 10px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; line-height: 1.5; }
+    .rules { display: grid; gap: 0; }
+    @media (min-width: 900px) { .rules { grid-template-columns: 1fr 1fr; column-gap: 40px; } }
+    .rules li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .rules li strong { font-weight: 700; font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+    .rules--no li strong { color: var(--bordo); }
+
+    /* wireframes */
+    .wf-wrap { display: grid; gap: 32px; align-items: start; }
+    @media (min-width: 1024px) { .wf-wrap { grid-template-columns: 240px 1fr; } }
+    .wf { border: 1px solid var(--choco); background: var(--papel); padding: 8px; display: grid; gap: 6px; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+    .wf > div, .wf .g > div { border: 1px dashed rgba(42,25,18,.4); padding: 6px; display: flex; align-items: flex-end; min-height: 22px; color: var(--muted); }
+    .wf .img { background: repeating-linear-gradient(135deg, rgba(42,25,18,.06) 0 6px, transparent 6px 12px); }
+    .wf .dark { background: var(--choco); color: var(--marfil) !important; border-style: solid !important; }
+    .wf .bordo { background: var(--bordo); color: var(--marfil) !important; border-style: solid !important; }
+    .wf .g { display: grid; gap: 6px; border: 0 !important; padding: 0 !important; }
+    .wf-cap { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
+    .legend { counter-reset: s; }
+    .legend li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .legend li::before { content: counter(s, decimal-leading-zero); font-size: 10px; letter-spacing: .16em; color: var(--cognac); font-weight: 700; padding-top: 3px; }
+    .stitch-demo { height: 8px; background: var(--stitch) repeat-x left center / 12px 8px; }
+    .shot { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    @media (min-width: 900px) { .shot { grid-template-columns: repeat(4, 1fr); } }
+    .shot .ph { --ratio: 4/5; }
+  </style>
+</head>
+<body>
+<header class="hdr hdr--static">
+  <div class="hdr__bar">
+    <a class="caps" href="index.html" style="font-size:10.5px;font-weight:700">← Home</a>
+    <span class="logo">shula</span>
+    <a class="caps" href="vista.html" style="font-size:10.5px;font-weight:700;justify-self:end">Mobile + desktop →</a>
+  </div>
+</header>
+
+<main class="dv" style="padding-top:110px">
+  <p class="eyebrow" style="color:var(--cognac)">Documento de trabajo · v2 · ajustado con el Instagram @shula.rc</p>
+  <h1>Dirección visual</h1>
+  <p class="intro">Catálogo de moda, revista y taller en una misma página, con la actitud de shula: campo y ciudad, jeans y botas, tachas y tiento. La foto real del cuero manda y el negro del logo ordena todo.</p>
+
+  <section>
+    <h2>Lo que dice su Instagram</h2>
+    <div>
+      <ul class="rules">
+        <li><strong>Marca</strong>Logo “shula” en minúscula bold, blanco sobre negro. Cartel: “100% cuero vacuno | hecho a mano”.</li>
+        <li><strong>Origen</strong>Río Cuarto, Córdoba. Envíos a todo el país. Stand en la Expo Rural.</li>
+        <li><strong>Productos</strong>Top con caída (regulable), cañas de botas intercambiables, materas con tiento, portalentes, piezas con pelo y animal print, tachas.</li>
+        <li><strong>Voz</strong>Voseo, cercana, con humor: “vos elegís el cuero y el diseño”, “no compres botas nuevas, transformá las tuyas”, “pedí el tuyo”.</li>
+        <li><strong>Fotos</strong>Al aire libre, luz natural, looks con jeans, botas y negro; producto sobre arpillera o cuero.</li>
+        <li><strong>Modelo</strong>Catálogo sin carrito: cada pieza arma un pedido que se manda por WhatsApp.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Concepto</h2>
+    <div>
+      <p class="lead" style="max-width:40ch;margin-bottom:18px">“El atelier editado como una revista.”</p>
+      <p class="muted">shula no vende por precio sino por deseo y conversación. Por eso el sitio funciona como un lookbook: pocas palabras, mucho aire, fotos grandes que alternan producto, uso y detalle de oficio. Cada recorrido termina en una sola acción: consultar.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Paleta</h2>
+    <div class="sw-row">
+      <div class="swc" style="background:#ECE4D7;border:1px solid var(--line)"><b>Marfil</b>#ECE4D7 · fondo</div>
+      <div class="swc" style="background:#F5F0E7;border:1px solid var(--line)"><b>Papel</b>#F5F0E7 · superficies</div>
+      <div class="swc" style="background:#93552B;color:#F5F0E7"><b>Coñac</b>#93552B · acento, costura</div>
+      <div class="swc" style="background:#1C1613;color:#ECE4D7"><b>Negro shula</b>#1C1613 · logo, texto, bloques</div>
+      <div class="swc" style="background:#561B21;color:#ECE4D7"><b>Bordó</b>#561B21 · personalizados</div>
+      <div class="swc" style="background:#A38C5E;color:#2A1912"><b>Latón</b>#A38C5E · metal envejecido</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tipografía</h2>
+    <div>
+      <p class="muted" style="margin-bottom:18px">Una sola familia: Century Gothic. La jerarquía sale del contraste entre display grande en caja baja con tracking negativo y etiquetas mínimas en mayúsculas con tracking muy abierto. Sin serif “de lujo”, sin segunda fuente.</p>
+      <div class="type-row"><small>Logo<br>bold · minúscula · −.03em</small><span style="font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1">shula</span></div>
+      <div class="type-row"><small>Display<br>34–128 · −.03em</small><span style="font-size:48px;letter-spacing:-.03em;line-height:1">Hecho a mano, pieza por pieza.</span></div>
+      <div class="type-row"><small>Lead<br>17–21 · 0</small><span class="lead">Cada diseño puede adaptarse.</span></div>
+      <div class="type-row"><small>Cuerpo<br>15–16 · 0</small><span>Texto breve, nunca más de tres líneas por bloque.</span></div>
+      <div class="type-row"><small>Etiqueta<br>10.5 · +.32em · bold</small><span class="eyebrow">Piezas destacadas · Ver pieza</span></div>
+      <p class="muted" style="font-size:12px;margin-top:16px">Web: si el dispositivo no tiene Century Gothic se usa TeX Gyre Adventor (libre, misma familia geométrica). Para producción conviene licenciar la webfont de Century Gothic.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Firma: el tiento</h2>
+    <div>
+      <div class="stitch-demo" style="margin-bottom:20px"></div>
+      <p class="muted">La puntada oblicua del tiento y el punto guarnicionero que shula usa en sus piezas reemplaza a los separadores y líneas decorativas. Se “cose” de izquierda a derecha al entrar en pantalla. Aparece en el hero, en el menú, en “Cómo encargar” y al cierre de la campaña. En ningún otro lado: si se repite, pierde valor.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Fotografía</h2>
+    <div>
+      <p class="muted" style="margin-bottom:20px">Tres tipos de foto, siempre reales y de piezas existentes. Luz natural lateral, fondos de materiales (lino, madera, pared de cal), nada de fondos blancos de estudio salvo en el catálogo.</p>
+      <div class="shot">
+        <figure class="ph t-cognac"><span class="ph__label">Producto<b>Fondo neutro, frontal, 4:5</b></span></figure>
+        <figure class="ph t-choco"><span class="ph__label">En uso<b>Plano medio, cara fuera de cuadro o de perfil</b></span></figure>
+        <figure class="ph t-tabaco"><span class="ph__label">Detalle<b>Macro: costura, canto, hebilla, textura</b></span></figure>
+        <figure class="ph t-hueso"><span class="ph__label">Oficio<b>Manos, herramientas, molde, cuero cortado</b></span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Reglas</h2>
+    <div class="rules">
+      <ul>
+        <li><strong>Sí</strong>Ángulos rectos. Líneas de 1px. Botones rectangulares con borde.</li>
+        <li><strong>Sí</strong>Grillas asimétricas: ninguna fila repite la anterior.</li>
+        <li><strong>Sí</strong>Máximo una frase por bloque de imagen.</li>
+        <li><strong>Sí</strong>Todos los CTA terminan en WhatsApp o Instagram con mensaje precargado.</li>
+      </ul>
+      <ul class="rules--no">
+        <li><strong>No</strong>Precios, carrito, “agregar”, cuotas ni envíos.</li>
+        <li><strong>No</strong>Bordes redondeados, sombras, vidrio, gradientes, íconos decorativos.</li>
+        <li><strong>No</strong>Rosa, neón ni fotos generadas por IA.</li>
+        <li><strong>No</strong>Textos de relleno (“calidad premium”, “pasión por el detalle”).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Movimiento</h2>
+    <ul class="rules">
+      <li><strong>Revelado</strong>Imágenes que se descubren de arriba hacia abajo (clip-path, 1.4s).</li>
+      <li><strong>Zoom</strong>Escala 1.035 al hover, 1.2s, solo en piezas.</li>
+      <li><strong>Hero</strong>Las letras de shula suben en cascada; la foto se asienta de 1.06 a 1.</li>
+      <li><strong>Rendimiento</strong>Solo transform, opacity y clip-path. Sin librerías. Se desactiva con “reducir movimiento”.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Wireframe · Home</h2>
+    <div class="wf-wrap">
+      <div>
+        <p class="wf-cap">Mobile · 390</p>
+        <div class="wf">
+          <div>≡ Menú · shula · Consultar</div>
+          <div class="img" style="min-height:220px">Hero foto 9:16 · frase · CTA · shula gigante · costura</div>
+          <div class="g" style="grid-template-columns:1.6fr 1fr"><div class="img" style="min-height:80px">Categoría</div><div class="img">→ scroll</div></div>
+          <div class="img" style="min-height:120px">Destacada grande 4:5</div>
+          <div class="g" style="grid-template-columns:1fr 1fr"><div class="img" style="min-height:70px">B</div><div class="img" style="min-height:70px;margin-top:14px">C</div></div>
+          <div class="img" style="min-height:60px">D horizontal</div>
+          <div class="dark" style="min-height:80px">Cañas de botas · frase + 2 fotos</div>
+          <div style="min-height:110px">Colección · collage superpuesto</div>
+          <div style="min-height:40px">Sobre shula · texto</div>
+          <div class="img" style="min-height:80px">Manos 4:5</div>
+          <div class="g" style="grid-template-columns:1.6fr 1fr"><div class="img" style="min-height:40px">Proceso</div><div class="img">→</div></div>
+          <div>Filtros · scroll</div>
+          <div class="g" style="grid-template-columns:1fr 1fr"><div class="img" style="min-height:50px">Pieza</div><div class="img">Pieza</div><div class="img" style="min-height:50px">Pieza</div><div class="img">Pieza</div></div>
+          <div class="bordo" style="min-height:110px">¿Tenés una idea? · lista · CTA</div>
+          <div style="min-height:70px">Cómo encargar · 4 pasos</div>
+          <div class="g" style="grid-template-columns:repeat(3,1fr)"><div class="img" style="min-height:34px"></div><div class="img"></div><div class="img"></div></div>
+          <div style="min-height:50px">Hablemos de tu próxima pieza · WA / IG</div>
+          <div class="dark">Footer</div>
+        </div>
+      </div>
+      <div>
+        <p class="wf-cap">Desktop · 1440</p>
+        <div class="wf">
+          <div>Catálogo · Colecciones · Sobre shula &nbsp;&nbsp;|&nbsp;&nbsp; shula &nbsp;&nbsp;|&nbsp;&nbsp; Personalizados · Instagram · WhatsApp</div>
+          <div class="img" style="min-height:220px;display:grid;align-content:end">Hero fullscreen 16:9 · frase + CTA · wordmark shula de borde a borde · costura</div>
+          <div class="g" style="grid-template-columns:repeat(7,1fr);align-items:start"><div class="img" style="min-height:70px">Carteras</div><div class="img" style="min-height:70px;margin-top:16px">Tops</div><div class="img" style="min-height:70px">Charms</div><div class="img" style="min-height:70px;margin-top:16px">Cintos</div><div class="img" style="min-height:70px">Acces.</div><div class="img" style="min-height:70px;margin-top:16px">Mate</div><div class="img" style="min-height:70px">Pers.</div></div>
+          <div class="g" style="grid-template-columns:6fr 1fr 3fr 2fr;align-items:start"><div class="img" style="min-height:170px">A · 4:5 grande</div><span></span><div class="img" style="min-height:90px;margin-top:20px">B</div><div class="img" style="min-height:60px;margin-top:130px">C</div></div>
+          <div class="g" style="grid-template-columns:2fr 6fr 1fr 3fr;align-items:start"><span></span><div class="img" style="min-height:100px">D · horizontal</div><span></span><div class="img" style="min-height:80px;margin-top:40px">E</div></div>
+          <div class="g" style="grid-template-columns:3fr 1fr 4fr 4fr;align-items:center"><div class="img" style="min-height:80px">F</div><span></span><div>Nota + ver catálogo</div><span></span></div>
+          <div class="dark" style="min-height:160px;display:grid;grid-template-columns:6fr 4fr 3fr;gap:6px;align-items:start;padding:10px"><div class="img" style="min-height:120px;border:1px dashed rgba(236,228,215,.4)">Campaña 01</div><div class="img" style="min-height:80px;margin-top:40px;border:1px dashed rgba(236,228,215,.4)">02</div><div style="margin-top:40px">Colección · título</div></div>
+          <div class="g" style="grid-template-columns:6fr 1fr 5fr;align-items:start"><div class="img" style="min-height:140px">Manos (sticky)</div><span></span><div style="display:grid;gap:6px;border:0;padding:0"><div>Sobre shula · titular · texto</div><div class="g" style="grid-template-columns:1fr 1fr"><div class="img" style="min-height:50px">Diseño</div><div class="img" style="min-height:50px;margin-top:14px">Corte</div><div class="img" style="min-height:50px">Costura</div><div class="img" style="min-height:50px;margin-top:14px">Terminación</div></div></div></div>
+          <div>Catálogo · filtros por categoría</div>
+          <div class="g" style="grid-template-columns:repeat(4,1fr)"><div class="img" style="min-height:60px">Pieza</div><div class="img">Pieza</div><div class="img">Pieza</div><div class="img">Pieza</div></div>
+          <div class="bordo" style="min-height:130px;display:grid;grid-template-columns:5fr 1fr 3fr 3fr;gap:6px;align-items:start;padding:10px"><div>¿Tenés una idea? · lista adaptable · CTA</div><span></span><div style="min-height:80px;border:1px dashed rgba(236,228,215,.4)">Foto boceto</div><div style="min-height:60px;margin-top:50px;border:1px dashed rgba(236,228,215,.4)">Foto pieza</div></div>
+          <div class="g" style="grid-template-columns:repeat(4,1fr)"><div>01 Elegís →</div><div>02 Consultás →</div><div>03 Definimos →</div><div>04 Se realiza</div></div>
+          <div class="g" style="grid-template-columns:repeat(6,1fr)"><div class="img" style="min-height:40px"></div><div class="img"></div><div class="img"></div><div class="img"></div><div class="img"></div><div class="img"></div></div>
+          <div class="g" style="grid-template-columns:8fr 4fr"><div style="min-height:60px">Hablemos de tu próxima pieza.</div><div>WhatsApp → / Instagram →</div></div>
+          <div class="dark">Footer · shula · links · contacto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Estructura</h2>
+    <ol class="legend">
+      <li>Header mínimo. Logo centrado; en mobile “Menú” + “Consultar”. Se vuelve sólido al pasar el hero y se oculta al bajar.</li>
+      <li>Hero: una foto editorial, frase de marca, “Explorar piezas” y el wordmark ocupando todo el ancho.</li>
+      <li>Categorías: 7 fotos verticales. Scroll horizontal en mobile; en desktop, fila escalonada.</li>
+      <li>Destacadas: 6 piezas en grilla asimétrica. Foto, nombre, categoría, “Ver pieza”.</li>
+      <li>Cañas de botas: el producto insignia, sobre negro.</li><li>Colección: collage de revista, un título, una línea.</li>
+      <li>Sobre shula: foto de manos + 4 pasos reales del oficio.</li>
+      <li>Catálogo: filtros por categoría, 2 columnas mobile / 4 desktop.</li>
+      <li>Personalizados: bloque bordó, lo que se puede adaptar, “Contanos tu idea”.</li>
+      <li>Cómo pedir: es un catálogo, los pedidos van por WhatsApp.</li>
+      <li>Instagram: 6 posts reales.</li>
+      <li>CTA final: WhatsApp / Instagram.</li>
+      <li>Footer mínimo.</li>
+    </ol>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/shula.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pieza — shula</title>
+  <meta name="description" content="Pieza de 100% cuero vacuno hecha a mano por shula. Armá tu pedido y mandalo por WhatsApp.">
+  <meta property="og:site_name" content="shula">
+  <meta property="og:image" content="https://shula.com.ar/img/web/hero-lago.jpg">
+  <meta name="theme-color" content="#ECE4D7">
+  <link rel="preload" href="fonts/adventor-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/shula.css">
+</head>
+<body class="pdp-page">
+
+<header class="hdr hdr--static">
+  <div class="hdr__bar">
+    <button class="hdr__menu-btn" type="button" data-menu-open aria-expanded="false" aria-controls="menu"><i></i>Menú</button>
+    <a class="logo" href="index.html" aria-label="shula, inicio">shula</a>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="menu__top">
+    <span class="logo">shula</span>
+    <button class="caps" type="button" data-menu-close>Cerrar</button>
+  </div>
+  <ul class="menu__list">
+    <li><a href="index.html#catalogo">Catálogo</a></li>
+    <li><a href="index.html#personalizados">Personalizados</a></li>
+    <li><a href="index.html#encargar">Cómo pedir</a></li>
+    <li><a href="index.html#atelier">Sobre Shula</a></li>
+    <li><a href="index.html#devolucion">Devolución</a></li>
+  </ul>
+  <span class="stitch is-in" aria-hidden="true"></span>
+</div>
+
+<main class="pdp" data-pdp>
+  <nav class="crumbs" aria-label="Ruta">
+    <a href="index.html">Inicio</a><i>/</i><a href="index.html#catalogo">Catálogo</a><i>/</i><span data-p-cat>Categoría</span>
+  </nav>
+
+  <div class="pdp__grid">
+    <!-- Galería -->
+    <div class="gal">
+      <div class="gal__track" tabindex="0" aria-label="Galería de fotos">
+        <figure class="ph t-cognac"><span class="ph__label">Foto 1 · principal<b data-p-toma>Producto de frente · 4:5</b></span></figure>
+        <figure class="ph t-choco"><span class="ph__label">Foto 2<b>En uso · plano medio</b></span></figure>
+        <figure class="ph t-arena"><span class="ph__label">Foto 3<b>Lateral / espalda</b></span></figure>
+        <figure class="ph t-tabaco"><span class="ph__label">Foto 4<b>En uso · al aire libre, horizontal</b></span></figure>
+        <figure class="ph t-hueso"><span class="ph__label">Foto 5<b>Interior / reverso</b></span></figure>
+        <figure class="ph t-negro"><span class="ph__label">Foto 6<b>Detalle: costura, tachas o tiento</b></span></figure>
+      </div>
+      <div class="gal__ui"><span data-gal-count>1 / 6</span><span class="gal__bar"><i></i></span><span class="muted">Deslizá</span></div>
+    </div>
+
+    <!-- Información + pedido -->
+    <aside class="info">
+      <p class="eyebrow" data-p-cat>Categoría</p>
+      <h1 data-p-name>Nombre de la pieza</h1>
+      <p class="info__desc" data-p-desc>[Descripción breve]</p>
+
+      <form class="pedido" id="pedido" data-pedido novalidate>
+        <div class="pedido__title"><h2>armá tu pedido</h2><span class="tag-catalogo">Por WhatsApp</span></div>
+        <p class="pedido__note">Esto es un catálogo: no se compra en la web. Elegí cómo la querés y te abrimos WhatsApp con el pedido listo para mandar.</p>
+
+        <div class="info__block">
+          <div class="info__label">Cuero <span data-out="cuero">Elegí uno</span></div>
+          <div class="opts" data-group="cuero" data-opts="cuero"></div>
+        </div>
+
+        <div class="info__block">
+          <div class="info__label">Color <span data-out="color">Elegí uno</span></div>
+          <div class="swatches" data-group="color" data-opts="color"></div>
+        </div>
+
+        <div class="info__block">
+          <div class="info__label">Medidas <span data-out="medida">Estándar</span></div>
+          <div class="opts" data-group="medida">
+            <button class="opt" type="button" aria-pressed="true" data-name="Estándar">Estándar</button>
+            <button class="opt" type="button" aria-pressed="false" data-name="A medida">A medida</button>
+          </div>
+          <div class="pedido__medida" data-medida-box>
+            <label class="sr-only" for="medida-txt">Medidas que querés</label>
+            <input class="field" id="medida-txt" name="medida" type="text" placeholder="Ej.: 25 × 18 cm, correa más larga…">
+          </div>
+        </div>
+
+        <div class="info__block">
+          <div class="info__label">Detalles <span>Opcional</span></div>
+          <div class="opts" data-group="detalles" data-multi data-opts="detalles"></div>
+        </div>
+
+        <div class="info__block">
+          <label class="info__label" for="nota">Contanos cómo la imaginás <span>Opcional</span></label>
+          <textarea class="field" id="nota" name="nota" rows="3" placeholder="Ideas, referencias, para cuándo la necesitás…"></textarea>
+        </div>
+
+        <button class="btn btn--solid" type="submit" data-main-cta>Pedir por WhatsApp <span class="arr">→</span></button>
+        <span class="pedido__alt">¿Preferís Instagram? <a data-ig href="#">Escribinos por DM</a></span>
+      </form>
+
+      <div class="acc">
+        <details open>
+          <summary>Material <i></i></summary>
+          <div class="acc__body"><dl><dt>Cuero</dt><dd>100% cuero vacuno</dd><dt>Hecho</dt><dd>A mano, en Río Cuarto, Córdoba</dd><dt>Herrajes</dt><dd>[Si corresponde]</dd></dl></div>
+        </details>
+        <details>
+          <summary>Medidas <i></i></summary>
+          <div class="acc__body"><dl><dt>Alto</dt><dd>[— cm]</dd><dt>Ancho</dt><dd>[— cm]</dd><dt>Profundidad</dt><dd>[— cm]</dd></dl><p style="margin-top:12px">Si la querés de otra medida, elegí “A medida” en tu pedido.</p></div>
+        </details>
+        <details>
+          <summary>Envíos <i></i></summary>
+          <div class="acc__body"><p>Hacemos envíos a todo el país. Lo coordinamos por WhatsApp cuando confirmás tu pedido.</p></div>
+        </details>
+        <details>
+          <summary>Cuidados <i></i></summary>
+          <div class="acc__body"><ul><li>Guardala en un lugar seco, lejos del sol directo.</li><li>Limpiala con un paño seco y suave.</li><li>Hidratá el cuero cada tanto con crema específica.</li><li>[Texto a revisar por shula]</li></ul></div>
+        </details>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Detalles -->
+  <section class="pdp__details" aria-labelledby="det-t">
+    <div class="sec__head"><div class="rv"><p class="eyebrow">De cerca</p><h2 class="display" id="det-t">Detalles</h2></div></div>
+    <div class="details__grid">
+      <figure class="d1 rv"><div class="ph t-tabaco rv-img"><span class="ph__label">Macro<b>Punto guarnicionero / tiento · horizontal</b></span></div><figcaption>Costura a mano</figcaption></figure>
+      <figure class="d2 rv"><div class="ph t-laton"><span class="ph__label">Macro<b>Tachas / herraje</b></span></div><figcaption>Tachas</figcaption></figure>
+      <figure class="d3 rv"><div class="ph t-cognac"><span class="ph__label">Macro<b>Textura del cuero</b></span></div><figcaption>Cuero vacuno</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Relacionadas -->
+  <section class="sec" aria-labelledby="rel-t">
+    <div class="sec__head"><div class="rv"><p class="eyebrow">Seguí mirando</p><h2 class="display" id="rel-t">Otras piezas</h2></div><a class="link-line" href="index.html#catalogo">Catálogo →</a></div>
+    <div class="grid" data-related></div>
+  </section>
+
+  <section class="final wrap" aria-labelledby="fin-t" style="padding-top:0">
+    <h2 class="rv" id="fin-t">Hablemos de tu próxima pieza.</h2>
+    <div class="final__links rv rv-d1">
+      <a data-wa href="#">WhatsApp <span data-wa-visible>Escribir →</span></a>
+      <a data-ig href="#">Instagram <span data-ig-handle>Mensaje →</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="ftr__top">
+    <div>
+      <span class="logo">shula</span>
+      <p class="eyebrow" style="margin-top:14px;color:var(--laton)">100% cuero vacuno | hecho a mano</p>
+    </div>
+    <div class="ftr__cols">
+      <div><h4>Piezas</h4><a href="index.html#catalogo">Catálogo</a><a href="index.html#encargar">Cómo pedir</a><a href="index.html#personalizados">Personalizados</a></div>
+      <div><h4>shula</h4><a href="index.html#atelier">Sobre shula</a><a href="index.html#encargar">Cómo pedir</a><a href="index.html#devolucion">Devolución</a></div>
+      <div><h4>Contacto</h4><a data-wa href="#">WhatsApp</a><a data-ig href="#">Instagram</a></div>
+    </div>
+  </div>
+  <div class="ftr__bottom"><span>© <span data-year></span> shula · Río Cuarto, Córdoba</span><span>Envíos a todo el país · Pedidos por WhatsApp</span></div>
+</footer>
+
+<!-- CTA fijo mobile: manda el pedido con lo que se haya elegido -->
+<div class="sticky-cta" aria-label="Pedir">
+  <div class="sticky-cta__name"><b data-p-name>Pieza</b><span data-p-cat>Categoría</span></div>
+  <a class="btn btn--solid" data-send-order href="#">Pedir por WhatsApp</a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/shula.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Vercel / secretos
+.vercel
+.env*
+# Originales pesados o privados (no se publican)
+img/ig/
+img/originales/
+img/_debug/
+# Archivos sueltos sin uso
+fonts/*.html
+/*.png

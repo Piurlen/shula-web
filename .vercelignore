@@ -1,0 +1,18 @@
+# Archivos internos que no se publican
+.claude
+LEEME.md
+vista.html
+direccion.html
+img/ig
+img/originales
+img/_debug
+img/procesar.py
+img/logo-referencia.jpg
+*.png
+.env*
+.gitignore
+.vercel
+vercel.json
+.vercelignore
+fonts/*.html
+CLAUDE.md
